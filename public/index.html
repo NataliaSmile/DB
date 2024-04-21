@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <title>Мовні маркери комунікативного інтернет-конфлікту</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dropdown.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <h1 class="header-title">Мовні маркери комунікативного інтернет-конфлікту</h1>
+    </header>
+
+    <nav id="navigation" class="hidden">
+        <div>
+            <input id="search" type="text" />
+            <button class="search" onclick="search()">Пошук</button>
+        </div>
+
+        <div class="dropdown">
+            <button id="drop-btn-1" onclick="toggleDropdown('dropdown-1')" class="dropbtn" title="За рівнем">
+                За рівнем
+            </button>
+            <div id="dropdown-1" class="dropdown-content">
+                <a href="#" onclick="dropdownActionRequest()">Option 1</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button id="drop-btn-2" onclick="toggleDropdown('dropdown-2')" class="dropbtn" title="За морфологічною характеристикою">
+                За морфологічною характеристикою
+            </button>
+            <div id="dropdown-2" class="dropdown-content">
+                <a href="#" onclick="dropdownActionRequest()">Option 1</a>
+            </div>
+        </div>
+
+        <button class="reset" onclick="resetFilters()">
+            Скинути фільтри
+        </button>
+    </nav>
+
+    <table id="table" class="hidden">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Маркер комунікативного конфлікту</th>
+                <th>Контекст</th>
+                <th>Рівень</th>
+                <th>Морфологічна характеристика</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <footer id="footer">
+        <p class="footer-text">Прикладна лінгвістика.<br />ДонНУ ім. Василя Стуса.<br />Луцишина Наталія<br />2024</p>
+    </footer>
+    <script src="scripts/common.js"></script>
+</body>
+
+</html>
