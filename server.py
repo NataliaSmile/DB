@@ -45,7 +45,7 @@ def create_sql_query(level: str, char: str, search: str):
     ]
     filtered_array = [item for item in arr if item is not None]
     res = " AND ".join(filtered_array)
-    return  f"SELECT * FROM words{' WHERE ' + res if len(res) > 0 else ''}"
+    return  f"SELECT * FROM words{' WHERE ' + res if len(res) > 0 else ''} ORDER BY name ASC"
 
 @app.get("/words/")
 def read_words(db: Session = Depends(get_db), level: str = None, char: str = None, search: str = None):

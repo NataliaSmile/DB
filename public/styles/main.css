@@ -16,10 +16,6 @@
     box-sizing: border-box;
 }
 
-html {
-    overflow: hidden;
-}
-
 @keyframes headerAnimation {
     from {
         height: 100vh;
@@ -181,7 +177,7 @@ button.hidden {
     justify-content: center;
     align-items: baseline;
     width: 100%;
-    margin: 8px;
+    margin-top: 8px;
 }
 
 #navigation.hidden {
@@ -217,4 +213,12 @@ button.hidden {
 
 ::-webkit-scrollbar-thumb:active {
     background: #666;
+}
+
+#taglist li:last-child:after {
+    content: "";
+}
+
+ol {
+    margin-left: 16px;
 }

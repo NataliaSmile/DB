@@ -36,9 +36,12 @@ function wordsToTable(words) {
     words.forEach(word => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${word.id}</td>
             <td>${word.name}</td>
-            <td>${word.description}</td>
+            <td>
+                <ol type="1">
+                    ${word.description.split('#').map(i => `<li>${i}</li>`).join("")}
+                </ol>
+            </td>
             <td>${word.level}</td>
             <td>${word.characteristic}</td>
         `;
